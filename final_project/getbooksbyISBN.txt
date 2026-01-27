@@ -1,2 +1,9 @@
 curl http://localhost:5000/isbn/isbn-1234567890
-{"author":"Chinua Achebe","title":"Things Fall Apart","reviews":{},"isbn":"isbn-1234567890"}
+{
+    "book": {
+        "author": "Chinua Achebe",
+        "title": "Things Fall Apart",
+        "reviews": {},
+        "isbn": "isbn-1234567890"
+    }
+}

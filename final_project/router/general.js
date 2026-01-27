@@ -23,7 +23,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
   let isbn = req.params.isbn;
   let book = Object.values(books).find(book => book.isbn === isbn);
   if(book) {
-    res.send(JSON.stringify(book));
+    res.send(JSON.stringify({book}, null, 4));
   } else {
     res.send(`Book with ISBN ${isbn} not found`);
   }
@@ -33,13 +33,25 @@ public_users.get('/isbn/:isbn',function (req, res) {
 // Get book details based on author
 public_users.get('/author/:author',function (req, res) {
   //Write your code here
-  return res.status(300).json({message: "Yet to be implemented"});
+  let author = req.params.author;
+  let booksByAuthor = Object.values(books).filter(book => book.author === author);
+  if(booksByAuthor.length > 0) {
+    res.send(JSON.stringify({booksByAuthor}, null, 4));
+  } else {
+    res.send(`No books found for author ${author}`);
+  }
 });
 
 // Get all books based on title
 public_users.get('/title/:title',function (req, res) {
   //Write your code here
-  return res.status(300).json({message: "Yet to be implemented"});
+  let title = req.params.title;
+  let booksByTitle = Object.values(books).filter(book => book.title === title);
+  if(booksByTitle.length > 0) {
+    res.send(JSON.stringify({booksByTitle}, null, 4));
+  } else {
+    res.send(`No books found with title ${title}`);
+  }
 });
 
 //  Get book review

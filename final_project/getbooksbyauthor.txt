@@ -1,0 +1,29 @@
+curl http://localhost:5000/author/Unknown
+{
+    "booksByAuthor": [
+        {
+            "author": "Unknown",
+            "title": "The Epic Of Gilgamesh",
+            "reviews": {},
+            "isbn": "isbn-4567890123"
+        },
+        {
+            "author": "Unknown",
+            "title": "The Book Of Job",
+            "reviews": {},
+            "isbn": "isbn-5678901234"
+        },
+        {
+            "author": "Unknown",
+            "title": "One Thousand and One Nights",
+            "reviews": {},
+            "isbn": "isbn-6789012345"
+        },
+        {
+            "author": "Unknown",
+            "title": "Njál's Saga",
+            "reviews": {},
+            "isbn": "isbn-7890123456"
+        }
+    ]
+}
