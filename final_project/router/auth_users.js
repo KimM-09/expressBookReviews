@@ -7,15 +7,32 @@ let users = [];
 
 const isValid = (username)=>{ //returns boolean
 //write code to check is the username is valid
+//filter the users array to check if the username already exists
+let userWithSameName = users.filter(user => {
+  return user.username === username;
+})
+// Return true if any user with the same username is found, otherwise false
+if(userWithSameName.length > 0) {
+  return true;
+} else {
+  return false;
+}
 }
 
 const authenticatedUser = (username,password)=>{ //returns boolean
 //write code to check if username and password match the one we have in records.
 }
 
+
 //only registered users can login
 regd_users.post("/login", (req,res) => {
   //Write your code here
+  let username = req.body.username;
+  let password = req.body.password;
+
+  if(!username || !password) {
+
+  }
   return res.status(300).json({message: "Yet to be implemented"});
 });
 

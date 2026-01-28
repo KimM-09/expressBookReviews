@@ -1,0 +1,2 @@
+curl --request POST 'localhost:5000/register?username=jen&password=password'
+User jen registered successfully.
