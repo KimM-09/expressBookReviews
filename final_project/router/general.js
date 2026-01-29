@@ -13,7 +13,7 @@ public_users.post("/register", (req,res) => {
   if(username && password) {
     //check if the user is valid
     if(!isValid(username)) {
-      users.push({"username":username,"passwork":password});
+      users.push({"username":username,"password":password});
       res.send(`User ${username} registered successfully.`);
     } else {
       res.send(`User ${username} already exists.`);
