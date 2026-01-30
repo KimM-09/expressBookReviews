@@ -1,2 +1,9 @@
 curl http://localhost:5000/review/isbn-5678901234
-Book with ISBN isbn-5678901234 not found
+{
+    "reviews": [
+        {
+            "username": "user1",
+            "review": "review"
+        }
+    ]
+}
